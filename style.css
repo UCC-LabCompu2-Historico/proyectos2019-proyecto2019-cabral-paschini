@@ -1,0 +1,11 @@
+body{
+    font-family: calibri;
+}
+#tituloPrincipal{
+    color: #ff95e8;;
+    column-count: 2;
+}
+.teoriageneral{
+    font-size: 30px;
+}
+
