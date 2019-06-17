@@ -1,11 +1,12 @@
 body{
-    bgcolor="FFCECB"
+    bgcolor:#FFCECB;
     font-family: calibri;
 }
 #tituloPrincipal{
-    color: #ff95e8;;
-    column-count: 2;
+    color: #ff95e8;
 }
+
+
 .teoriageneral{
     font-size: 30px;
 }
@@ -14,10 +15,11 @@ nav a{
     text-decoration: none;
     padding: 3px;
     background: #ffd3fa;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-a:hover{
-    font-size: 1.5em;
-    color: deeppink;
-}
 

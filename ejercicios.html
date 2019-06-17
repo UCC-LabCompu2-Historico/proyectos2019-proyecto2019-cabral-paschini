@@ -5,8 +5,9 @@
 
     <title> CC calculos</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
-<body background="fondo1.jpg" bgcolor="FFCECB">
+<body background="fondo1.jpg" bgcolor="FFCECB" onload="saludarejercicios()">
 
 <table width="550" bgcolor=FFCECB align=center>
     <tr>
@@ -15,29 +16,37 @@
 <header>
     <div id="tituloPrincipal">
 
-        <img src="imagenes\descarga.jpg" width="100 px">
-        <h1><u>CC CALCULADORA: PARA APRENDER ECUACIONES</u></h1>
+        <h1><img src="imagenes\descarga.jpg" width="100 px">
+        <u>CC CALCULADORA: PARA APRENDER ECUACIONES</u></h1>
     </div>
     <nav>
-        <a href="pagina.html" target="_blank">INICIO</a>
-        <a href="temas.html" target="_blank"> TEMAS</a>
-        <a href="ejercicios.html" target="_blank"> EJERCICIOS</a>
-        <a href="somos.html" target="_blank"> QUIENES SOMOS?</a>
-        <a href="contacto.html" target="_blank"> CONTACTANOS</a>
+        <a href="index.html">INICIO</a>
+        <a href="temas.html"> TEMAS</a>
+        <a href="ejercicios.html"> EJERCICIOS</a>
+        <a href="somos.html" > QUIENES SOMOS?</a>
+        <a href="contacto.html"> CONTACTANOS</a>
     </nav>
-    <form id="Ejercicios">
 
-        <p> Primer Grado <input type="text" name="Ecuaciones de primer grado"> <br><input type="button" value="Enviar"> </p>
+    <form id="Ejercicios" name="ejercicios">
 
-        <p> Segundo Grado <input type="text" name="Ecuaciones de segundo grado"> <br> <input type="button" value="Enviar"> </p>
+        <p> Primer Grado</p>
 
-        Duda por la resolucion :
-        <textarea name="comentario">
+        <span> coeficiente de X=</span><input type="text" name="X" id="X"> + <input type="text" name="Nro" id="Nro"> =<input type="text" name="resultado" id="resultado"><input onclick="resolverprimergrado()" type="button" value="Enviar">
+        <br><input id="total1" type="text" name="primerrdo" disabled>
+        <p> Segundo Grado</p>
+        <span>coeficiente de X^2</span><input type="text" name="Xcuadrado" id="Xcuadrado"> + coeficiente de X <input type="text" name="Xdos" id="Xdos"> +<input type="text" name="Nrodos" id="Nrodos">=<input type="text" name="resultadodos" value="0" disabled><input onclick="resolversegundogrado()" type="button" value="Enviar">
+        <br> X1= <input id="total2" type="text" name="segundordoa" disabled>
+        <br> X2=<input id="total2" type="text" name="segundordob" disabled>
+        <br><input onclick="func()" type="text" value=" ver resultado">
 
 </textarea>
     </form>
 </header>
 
+
+<div id="mostrarCalculos">
+
+</div>
 
 </body>
 </html>
