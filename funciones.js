@@ -18,6 +18,10 @@ function saludarcontacto (){
 function saludarquienes() {
     alert("Conocenos!");
 }
+function saludargrafica()
+{
+    alert("Vamos a graficas esas coordenadas");
+}
 
 function resolverprimergrado(){
     document.ejercicios.primerrdo.value=( Number(document.ejercicios.resultado.value)- Number(document.ejercicios.Nro.value))/Number(document.ejercicios.X.value);
@@ -38,3 +42,30 @@ function func(){
     divMostrar.innerHTML+="<p>Paso dos: x="+ (Number(document.ejercicios.resultado.value)-Number(document.ejercicios.Nro.value))+" / "+ Number(document.ejercicios.X.value)+"</p>";
     divMostrar.innerHTML+="<p> Resolver segundo Grado:</p><p>Aplicamos Bhaskara:</p>"+" <P>- "+ Number(document.ejercicios.Xdos.value)+"+<p> determinante: raiz cuadrada de "+Number(document.ejercicios.Xdos.value)+" elevado al cuadrado - 4* "+Number(document.ejercicios.Xcuadrado.value)+"*"+Number(document.ejercicios.Nrodos.value)+" dividido 2* "+Number(document.ejercicios.Xcuadrado.value)+"</p>"
     +"<p> IMPORTANTE: RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO Y ALLI OBTENEMOS LAS DOS RAICES</p>";}
+
+
+function dibujarCuadriculado (){
+    ctx.fillStyle= "000";
+    var canvas =document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+ctx.moveTo(0,canvas.height/2);
+ctx.lineTo(canvas.width,canvas.height/2);
+ctx.moveTo(canas.width/2,0);
+ctx.lineTo(canvas.width/2,canvas.height);
+ctx.stroke();
+    ctx.beginPath();
+    ctx.fillStyle= "#ff6072";
+    for (let i=0;i<canvas.height;i+=10) {
+        ctx.moveTo(0, i+10);
+        ctx.lineTo(canvas.width, i+10);
+    }
+
+    for (let t=0;t<canvas.width;t+=10) {
+        ctx.moveTo(t+10, 0);
+        ctx.lineTo(t+10, canvas.height);
+        ctx.stroke();
+    }
+
+    ctx.closePath();
+
+}
