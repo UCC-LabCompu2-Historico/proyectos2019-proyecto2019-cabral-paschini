@@ -24,12 +24,17 @@ function resolverprimergrado(){
 
 }
 
-function resolversegundogrado(){
-    document.ejercicios.segundordoa.value= (-Number(document.ejercicios.Xdos.value)+sqrt((Number(document.ejercicios.Xdos.value)*Number(document.ejercicios.Xdos.value))-(4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))/(2*Number(document.ejercicios.Xcuadrado.value));
-    document.ejercicios.segundordob.value=(-Number(document.ejercicios.Xdos.value)-sqrt((Number(document.ejercicios.Xdos.value)*Number(document.ejercicios.Xdos.value))-(4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))/(2*Number(document.ejercicios.Xcuadrado.value));
+function resolversegundogradoa() {
+    document.ejercicios.segundordoa.value= ((-1*Number(document.ejercicios.Xdos.value)) +(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
+    document.ejercicios.segundordob.value= ((-1*Number(document.ejercicios.Xdos.value)) -(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
+
 }
+
+
 function func(){
     let divMostrar = document.getElementById("mostrarCalculos");
-    document.getElementById("mostrarCalculos").innerHTML += "Paso uno: " Number(document.ejercicios.X.value)x=Number(document.ejercicios.resultado.value)-Number(document.ejercicios.Nro.value);
-    divMostrar.innerHTML+="SALVEMOS LAS DOS VIDES";
-}
+    divMostrar.style.display = "flex";
+    document.getElementById("mostrarCalculos").innerHTML += "<p>Resolver primer grado:</p><p>Paso uno: " +Number(document.ejercicios.X.value)+"x="+Number(document.ejercicios.resultado.value)+"-"+Number(document.ejercicios.Nro.value)+"</p>";
+    divMostrar.innerHTML+="<p>Paso dos: x="+ (Number(document.ejercicios.resultado.value)-Number(document.ejercicios.Nro.value))+" / "+ Number(document.ejercicios.X.value)+"</p>";
+    divMostrar.innerHTML+="<p> Resolver segundo Grado:</p><p>Aplicamos Bhaskara:</p>"+" <P>- "+ Number(document.ejercicios.Xdos.value)+"+<p> determinante: raiz cuadrada de "+Number(document.ejercicios.Xdos.value)+" elevado al cuadrado - 4* "+Number(document.ejercicios.Xcuadrado.value)+"*"+Number(document.ejercicios.Nrodos.value)+" dividido 2* "+Number(document.ejercicios.Xcuadrado.value)+"</p>"
+    +"<p> IMPORTANTE: RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO Y ALLI OBTENEMOS LAS DOS RAICES</p>";}

@@ -1,25 +1,80 @@
 body{
     bgcolor:#FFCECB;
-    font-family: calibri;
+    font-family: "Calibri Light", serif;
+
 }
+
 #tituloPrincipal{
     color: #ff95e8;
+
 }
 
+#textoTeorico{
+    font-family: "Calibri Light", serif;
+    font-size: 20pt;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 
 .teoriageneral{
+    font-family: "Calibri Light", serif;
     font-size: 30px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
 }
 
-nav a{
+.imagenes{
+    flex-direction:row ;
+    justify-content: center;
+    align-content: space-around;
+}
+#autores{
+    text-align: left;
+}
+
+nav{
     text-decoration: none;
     padding: 3px;
     background: #ffd3fa;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: flex-start;
+
+}
+#ejercicios{
+    font-family: "Calibri Light", serif;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
 }
 
+#mostrarCalculos{
+    display: none;
+    height: 50vh;
+    margin-left: 33vw;
+    text-align: center;
+    width: 33vw;
+    border:1px solid black;
+    padding:10px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+#conocenos{
+    margin-right: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    font-family:"Calibri Light", serif;
+}
+
+#Contactanos{
+    font-family: "Calibri Light", serif;
+    font-size: 20pt;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 5%;
+
+}
