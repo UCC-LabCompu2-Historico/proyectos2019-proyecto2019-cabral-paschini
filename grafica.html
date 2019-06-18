@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title> CC calculos</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+</head>
+<body bgcolor="FFCECB" onload="saludargrafica()">
+
+
+<header>
+    <div id="tituloPrincipal">
+
+        <h1><img src="imagenes\descarga.jpg" width="100 px">
+            <u>CC CALCULADORA: PARA APRENDER ECUACIONES</u></h1>
+    </div>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="temas.html"> TEMAS</a>
+        <a href="ejercicios.html"> EJERCICIOS</a>
+        <a href="somos.html" > QUIENES SOMOS?</a>
+        <a href="contacto.html"> CONTACTANOS</a>
+    </nav>
+
+</header>
+
+    <h1>Dibuje los puntos de las coordenadas</h1>
+    <div class="centrado div-conver">
+        <form>
+            <p>
+                <label for="posicionX"> X</label> = <input id="posicionX" type="text" name="inp_x">
+            </p>
+            <p>
+                <label for="posicionY"> Y</label> = <input id="posicionY" type="text" name="inp_y">
+            </p>
+
+        </form>
+        <button onclick="dibujarCuadriculado()">
+            dibujar!
+        </button>
+    </div>
+
+<canvas id="myCanvas" class="ejer">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
+</body>
+</html>
