@@ -44,28 +44,30 @@ function func(){
     +"<p> IMPORTANTE: RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO Y ALLI OBTENEMOS LAS DOS RAICES</p>";}
 
 
-function dibujarCuadriculado (){
-    ctx.fillStyle= "000";
+function dibujarCuadriculado (){{
     var canvas =document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle= "#0000";
+    ctx.beginPath();
+    for (var i=10;i<canvas.width;i+=10) {
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, canvas.height);
+    }
+
+    for (var i=10;i<canvas.width;i+=10) {
+        ctx.moveTo(0, i);
+        ctx.lineTo(canvas.width, i);
+    }
+    ctx.stroke();
+    ctx.closePath();
+
+}
+
 ctx.moveTo(0,canvas.height/2);
 ctx.lineTo(canvas.width,canvas.height/2);
 ctx.moveTo(canas.width/2,0);
 ctx.lineTo(canvas.width/2,canvas.height);
 ctx.stroke();
-    ctx.beginPath();
-    ctx.fillStyle= "#ff6072";
-    for (let i=0;i<canvas.height;i+=10) {
-        ctx.moveTo(0, i+10);
-        ctx.lineTo(canvas.width, i+10);
-    }
-
-    for (let t=0;t<canvas.width;t+=10) {
-        ctx.moveTo(t+10, 0);
-        ctx.lineTo(t+10, canvas.height);
-        ctx.stroke();
-    }
-
-    ctx.closePath();
-
-}
+    ctx.beginPath();}
