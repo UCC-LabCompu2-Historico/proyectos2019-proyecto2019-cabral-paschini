@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
 
@@ -26,20 +26,27 @@
 
 </header>
 
-    <h1>Dibuje los puntos de las coordenadas</h1>
+    <h1>Dibuje el sistema de coordenadas</h1>
     <div class="centrado div-conver">
         <form>
+
             <p>
-                <label for="posicionX"> X</label> = <input id="posicionX" type="text" name="inp_x">
-            </p>
-            <p>
-                <label for="posicionY"> Y</label> = <input id="posicionY" type="text" name="inp_y">
-            </p>
+            <form name="datos">
+            <p> <input type="text" name="a" size="3">x+<input type="text" name="b" size="3">y= <input type="text" name="c" size="3"> </p>
+             <p><input type="text" name="d" size="3">x +<input type="text" name="e" size="3">y=<input type="text" name="f" size="3"> </p>
+               <p> x=<input type="text" name="x" size="5"> </p>
+            <p> y= <input type="text" name="y" size="5"> </p>
+                <input type="button" value="Resolver" onClick="res()"> </form>
 
         </form>
+        <br>
         <button onclick="dibujarCuadriculado()">
-            dibujar!
+            Dibujar Ejes de Coordenadas
         </button>
+        <button onclick="dibujarSistema()">
+            Dibujar el Sistema de ecuaciones
+        </button>
+        </br>
     </div>
 
 <canvas id="myCanvas" class="ejer">
