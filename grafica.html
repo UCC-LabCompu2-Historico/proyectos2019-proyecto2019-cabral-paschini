@@ -28,22 +28,22 @@
 
     <h1>Dibuje el sistema de coordenadas</h1>
     <div class="centrado div-conver">
-        <form>
+        <form name="datos">
 
             <p>
-            <form name="datos">
+            <form id="datos" name="datos">
             <p> <input type="text" name="a" size="3">x+<input type="text" name="b" size="3">y= <input type="text" name="c" size="3"> </p>
              <p><input type="text" name="d" size="3">x +<input type="text" name="e" size="3">y=<input type="text" name="f" size="3"> </p>
-               <p> x=<input type="text" name="x" size="5"> </p>
-            <p> y= <input type="text" name="y" size="5"> </p>
-                <input type="button" value="Resolver" onClick="res()"> </form>
+            <input type="button" value="Resolver" onClick="res()">
+            <p> x=<input type="text" name="x" size="5"> </p>
+            <p> y= <input type="text" name="y" size="5"> </p></form>
 
         </form>
         <br>
         <button onclick="dibujarCuadriculado()">
             Dibujar Ejes de Coordenadas
         </button>
-        <button onclick="dibujarSistema()">
+        <button onclick="dibujarSistemas()">
             Dibujar el Sistema de ecuaciones
         </button>
         </br>

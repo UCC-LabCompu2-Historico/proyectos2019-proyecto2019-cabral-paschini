@@ -61,13 +61,32 @@ function dibujarCuadriculado (){{
         ctx.lineTo(canvas.width, i);
     }
     ctx.stroke();
-    ctx.closePath();
+
 
 }
-
+ctx.fillStyle="#ff6072"
 ctx.moveTo(0,canvas.height/2);
 ctx.lineTo(canvas.width,canvas.height/2);
 ctx.moveTo(canas.width/2,0);
 ctx.lineTo(canvas.width/2,canvas.height);
 ctx.stroke();
-    ctx.beginPath();}
+
+    ctx.beginPath();
+}
+    function res()
+    {
+        a=document.datos.a.value;b=document.datos.b.value;c=document.datos.c.value;
+        d=document.datos.d.value;e=document.datos.e.value;f=document.datos.f.value;
+        g=a*e-b*d; if(g==0)
+    {if (c*e-b*f==0) {x="Indeterminado";y="Indeterminado"}
+    else{x="Inconpatible";y="Incompatible"}
+    }
+    else{x=(c*e-b*f)/g;y=(a*f-c*d)/g}; document.datos.x.value=x;document.datos.y.value=y;
+    }
+/*function dibujarSistemas() {
+
+            a=document.datos.a.value;b=document.datos.b.value;c=document.datos.c.value;
+            d=document.datos.d.value;e=document.datos.e.value;f=document.datos.f.value;
+            g=a*e-b*d;
+            x=(c*e-b*f)/g;y=(a*f-c*d)/g;
+            document.datos.x.value=x;document.datos.y.value=y;*/
