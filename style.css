@@ -24,10 +24,14 @@ body{
 
 }
 
-.imagenes{
-    flex-direction:row ;
-    justify-content: center;
-    align-content: space-around;
+.imagenes img{
+    margin:0px 1.7vw;
+
+
+}
+.imagenes img:hover{
+    transition: 1s ease-in;
+    transform: scale(1.2);
 }
 #autores{
     text-align: left;
@@ -43,7 +47,7 @@ nav{
     align-items: flex-start;
 
 }
-#ejercicios{
+.wrapper{
     font-family: "Calibri Light", serif;
     font-size: 20pt;
     margin-left: 5vw;
@@ -101,4 +105,14 @@ nav{
     width: 1000px;
     height: 500px;
     background: white;
+    margin-left: 5vw;
+
 }
+
+.centradodivconver{
+    font-family: "Calibri Light", serif;
+    font-size: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
