@@ -46,7 +46,6 @@ function func(){
     +"<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
 }
 
-
 function dibujarCuadriculado (){{
     var canvas =document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -62,20 +61,28 @@ function dibujarCuadriculado (){{
         ctx.moveTo(0, i);
         ctx.lineTo(canvas.width, i);
     }
-    ctx.strokeStyle="#fc29ef";
+    ctx.strokeStyle="rgba(110,110,110,0.67)";
     ctx.stroke();
 
 
 }
-    ctx.strokeStyle="#19090b"
-    ctx.moveTo(0,canvas.height/2);
-    ctx.lineTo(canvas.width,canvas.height/2);
-    ctx.moveTo(canvas.width/2,0);
-    ctx.lineTo(canvas.width/2,canvas.height);
-    ctx.stroke();
 
+
+    ctx.lineWidth = 2;
     ctx.beginPath();
+    ctx.strokeStyle="#000000";
+
+    ctx.moveTo(0, canvas.height / 2);
+    ctx.lineTo(canvas.width, canvas.height / 2);
+
+    ctx.moveTo(canvas.width / 2, 0);
+    ctx.lineTo(canvas.width / 2, canvas.height);
+
+    ctx.stroke();
+    ctx.closePath();
+
 }
+
 function res()
 {
     a=document.datos.a.value;b=document.datos.b.value;c=document.datos.c.value;
@@ -87,10 +94,16 @@ else{x="Inconpatible";y="Incompatible"}
 else{x=(c*e-b*f)/g;y=(a*f-c*d)/g}; document.datos.x.value=x;document.datos.y.value=y;
 }
 
-function dibujarInterseccion(a, d) {
-    ctx.fillStyle = "#af3679";
-    ctx.beginPath();
-    ctx.arc(canvas.width/2,canvas.width/2,a,d);
-    ctx.fill();
-    ctx.closePath();
+function DibujeInterseccion(x,y, x,y){
+
+   function res()
+   { ctx.beginPath();
+
+        ctx.moveTo(x,y);
+
+        ctx.lineTo(x1,y1);
+
+        ctx.stroke();
+    }
+
 }
