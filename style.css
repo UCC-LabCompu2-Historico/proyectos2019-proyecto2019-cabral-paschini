@@ -23,18 +23,25 @@ body{
     margin-right: 5vw;
 
 }
-
+.imagenes{
+    font-family: "Calibri Light", serif;
+    font-size: 30px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 .imagenes img{
     margin:0px 1.7vw;
-
 
 }
 .imagenes img:hover{
     transition: 1s ease-in;
     transform: scale(1.2);
 }
+
 #autores{
     text-align: left;
+    font-family: "Calibri Light", serif;
+    font-size: 20px;
 }
 
 nav{
