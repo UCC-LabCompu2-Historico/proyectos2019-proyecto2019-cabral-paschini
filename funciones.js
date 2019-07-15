@@ -26,14 +26,28 @@ function saludargrafica()
 function resolverprimergrado(){
     document.ejercicios.primerrdo.value=( Number(document.ejercicios.resultado.value)- Number(document.ejercicios.Nro.value))/Number(document.ejercicios.X.value);
 
-}
+/**
 
+ Descripción
+ @method Nombre de la función
+ @param Parámetro A
+ @param Parámetro B
+ @return Valor que retorna
+ */
+}
 function resolversegundogradoa() {
     document.ejercicios.segundordoa.value= ((-Number(document.ejercicios.Xdos.value)) +(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
     document.ejercicios.segundordob.value= ((-1*Number(document.ejercicios.Xdos.value)) -(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
     if(document.ejercicios.segundordoa.value==="NaN")
     alert("raices imaginarias");
+    /**
 
+     Descripción
+     @method Nombre de la función
+     @param Parámetro A
+     @param Parámetro B
+     @return Valor que retorna
+     */
 }
 
 
@@ -44,6 +58,14 @@ function func(){
     divMostrar.innerHTML+="<p>Paso dos: x="+ (Number(document.ejercicios.resultado.value)-Number(document.ejercicios.Nro.value))+" / "+ Number(document.ejercicios.X.value)+"</p>";
     divMostrar.innerHTML+="<p> Resolver segundo Grado:</p><p>Aplicamos Bhaskara:</p>A: " + Number(document.ejercicios.Xcuadrado.value) +"   B: "+Number(document.ejercicios.Xdos.value)+"   C: "+ Number (document.ejercicios.Nrodos.value)
     +"<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
+    /**
+
+     Descripción
+     @method Nombre de la función
+     @param Parámetro A
+     @param Parámetro B
+     @return Valor que retorna
+     */
 }
 
 function dibujarCuadriculado (){{
