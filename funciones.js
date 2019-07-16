@@ -23,18 +23,16 @@ function saludargrafica()
     alert("Vamos a graficas esas coordenadas");
 }
 
-function resolverprimergrado(){
-    document.ejercicios.primerrdo.value=( Number(document.ejercicios.resultado.value)- Number(document.ejercicios.Nro.value))/Number(document.ejercicios.X.value);
-
 /**
 
  Descripción
  @method Nombre de la función
- @param Parámetro A
- @param Parámetro B
- @return Valor que retorna
  */
+function resolverprimergrado(){
+    document.ejercicios.primerrdo.value=( Number(document.ejercicios.resultado.value)- Number(document.ejercicios.Nro.value))/Number(document.ejercicios.X.value);
 }
+
+
 function resolversegundogradoa() {
     document.ejercicios.segundordoa.value= ((-Number(document.ejercicios.Xdos.value)) +(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
     document.ejercicios.segundordob.value= ((-1*Number(document.ejercicios.Xdos.value)) -(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
@@ -68,7 +66,7 @@ function func(){
      */
 }
 
-function dibujarCuadriculado (){{
+function dibujarCuadriculado (){
     var canvas =document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
@@ -83,12 +81,11 @@ function dibujarCuadriculado (){{
         ctx.moveTo(0, i);
         ctx.lineTo(canvas.width, i);
     }
+
+    //Dibujar Ejes
     ctx.strokeStyle="rgba(110,110,110,0.67)";
     ctx.stroke();
-
-
-}
-
+    ctx.closePath();
 
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -102,8 +99,91 @@ function dibujarCuadriculado (){{
 
     ctx.stroke();
     ctx.closePath();
-
 }
+
+function marcarRecta(){
+    var canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d");
+    ctx.lineWidht= 2;
+    ctx.strokeStyle= "#001f33";
+    var x, y;
+
+    var vara=document.getElementById("a").value;
+    var varb=document.getElementById("b").value;
+    var varc=document.getElementById("c").value;
+    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
+
+    ctx.beginPath();
+    //Valor de inicio de la recta
+    x=50;
+    y=(varc-vara*x)/varb;
+    console.log("valor X: " + 50);
+    console.log("valor y: " + y);
+
+    dibX = transX(x);
+    dibY = transY(y);
+    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+    ctx.moveTo(dibX, dibY);
+
+    //Valor final de la recta
+    x=-50;
+    y=(varc-vara*x)/varb;
+    console.log("valor X: " + -50);
+    console.log("valor y: " + y);
+    dibX = transX(x);
+    dibY = transY(y);
+    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+    ctx.lineTo(dibX, dibY);
+    ctx.stroke();
+    ctx.closePath();
+
+
+
+
+    var vara=document.getElementById("d").value;
+    var varb=document.getElementById("e").value;
+    var varc=document.getElementById("f").value;
+    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
+
+    ctx.beginPath();
+    //Valor de inicio de la recta
+    x=50;
+    y=(varc-vara*x)/varb;
+    console.log("valor X: " + 50);
+    console.log("valor y: " + y);
+
+    dibX = transX(x);
+    dibY = transY(y);
+    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+    ctx.moveTo(dibX, dibY);
+
+    //Valor final de la recta
+    x=-50;
+    y=(varc-vara*x)/varb;
+    console.log("valor X: " + -50);
+    console.log("valor y: " + y);
+    dibX = transX(x);
+    dibY = transY(y);
+    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+    ctx.lineTo(dibX, dibY);
+    ctx.stroke();
+    ctx.closePath();
+}
+
+function transY(coorY) {
+    var trY = -(coorY-25)*10;
+
+    return trY;
+}
+
+function transX(coorX) {
+    var trX = (coorX+50)*10;
+
+    return trX;
+}
+
+
+
 
 function res()
 {
