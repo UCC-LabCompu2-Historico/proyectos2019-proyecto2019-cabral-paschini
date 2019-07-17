@@ -1,44 +1,60 @@
-function saludarindex(){
+function saludarindex() {
     alert("Bienvenido");
 }
 
-function saludartemas(){
-    alert ("Leemos el teorico ");
+function saludartemas() {
+    alert("Leemos el teorico ");
 }
 
-function saludarejercicios()
-{
+function saludarejercicios() {
     alert("Vamos a hacer ejercicios");
 }
 
-function saludarcontacto (){
+function saludarcontacto() {
     alert("¿Tenes alguna duda?");
 }
 
 function saludarquienes() {
     alert("Conocenos!");
 }
-function saludargrafica()
-{
+
+function saludargrafica() {
     alert("Vamos a graficas esas coordenadas");
 }
 
-/**
+function resolverprimergrado() {
+    if ((isNaN(Number(document.ejercicios.X.value)) === false) || (isNaN(Number(document.ejercicios.Nro.value)) === false)) {
+        alert("ingrese numeros porfavor");
+        document.ejercicios.X.value = "";
+        document.ejercicios.Nro.value = "";
+        document.ejercicios.resultado.value = "NaN";
+    }
+    document.ejercicios.primerrdo.value = (Number(document.ejercicios.resultado.value) - Number(document.ejercicios.Nro.value)) / Number(document.ejercicios.X.value);
+    /**
 
- Descripción
- @method Nombre de la función
- */
-function resolverprimergrado(){
-    document.ejercicios.primerrdo.value=( Number(document.ejercicios.resultado.value)- Number(document.ejercicios.Nro.value))/Number(document.ejercicios.X.value);
+     Descripción
+     @method Nombre de la función
+     @param Parámetro A
+     @param Parámetro B
+     @return Valor que retorna
+     */
 }
-
 
 function resolversegundogradoa() {
-    document.ejercicios.segundordoa.value= ((-Number(document.ejercicios.Xdos.value)) +(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
-    document.ejercicios.segundordob.value= ((-1*Number(document.ejercicios.Xdos.value)) -(Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value),2) - (4*Number(document.ejercicios.Xcuadrado.value)*Number(document.ejercicios.Nrodos.value))))))/(2*Number(document.ejercicios.Xcuadrado.value));
-    if(document.ejercicios.segundordoa.value==="NaN")
-    alert("raices imaginarias");
-    /**
+    if ((isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Nrodos.value)) === false)) {
+        alert("ingrese numeros porfavor");
+        document.ejercicios.Nrodos.value = "";
+        document.ejercicios.Xdos.value = "";
+        document.ejercicios.Xcuadrado.value = "";
+        document.ejercicios.segundordoa.value = "NaN";
+        document.ejercicios.segundordob.value = "NaN";
+    } else {
+        document.ejercicios.segundordoa.value = ((-Number(document.ejercicios.Xdos.value)) + (Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value), 2) - (4 * Number(document.ejercicios.Xcuadrado.value) * Number(document.ejercicios.Nrodos.value)))))) / (2 * Number(document.ejercicios.Xcuadrado.value));
+
+        document.ejercicios.segundordob.value = ((-1 * Number(document.ejercicios.Xdos.value)) - (Math.sqrt((Math.pow(Number(document.ejercicios.Xdos.value), 2) - (4 * Number(document.ejercicios.Xcuadrado.value) * Number(document.ejercicios.Nrodos.value)))))) / (2 * Number(document.ejercicios.Xcuadrado.value));
+        if (document.ejercicios.segundordoa.value === "NaN")
+            alert("raices imaginarias");
+    }/**
 
      Descripción
      @method Nombre de la función
@@ -49,13 +65,13 @@ function resolversegundogradoa() {
 }
 
 
-function func(){
+function func() {
     let divMostrar = document.getElementById("mostrarCalculos");
     divMostrar.style.display = "flex";
-    document.getElementById("mostrarCalculos").innerHTML += "<p>Resolver primer grado:</p><p>Paso uno: " +Number(document.ejercicios.X.value)+"x="+Number(document.ejercicios.resultado.value)+"-"+Number(document.ejercicios.Nro.value)+"</p>";
-    divMostrar.innerHTML+="<p>Paso dos: x="+ (Number(document.ejercicios.resultado.value)-Number(document.ejercicios.Nro.value))+" / "+ Number(document.ejercicios.X.value)+"</p>";
-    divMostrar.innerHTML+="<p> Resolver segundo Grado:</p><p>Aplicamos Bhaskara:</p>A: " + Number(document.ejercicios.Xcuadrado.value) +"   B: "+Number(document.ejercicios.Xdos.value)+"   C: "+ Number (document.ejercicios.Nrodos.value)
-    +"<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
+    document.getElementById("mostrarCalculos").innerHTML += "<p>Resolver primer grado:</p><p>Paso uno: " + Number(document.ejercicios.X.value) + "x=" + Number(document.ejercicios.resultado.value) + "-" + Number(document.ejercicios.Nro.value) + "</p>";
+    divMostrar.innerHTML += "<p>Paso dos: x=" + (Number(document.ejercicios.resultado.value) - Number(document.ejercicios.Nro.value)) + " / " + Number(document.ejercicios.X.value) + "</p>";
+    divMostrar.innerHTML += "<p> Resolver segundo Grado:</p><p>Aplicamos Bhaskara:</p>A: " + Number(document.ejercicios.Xcuadrado.value) + "   B: " + Number(document.ejercicios.Xdos.value) + "   C: " + Number(document.ejercicios.Nrodos.value)
+        + "<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
     /**
 
      Descripción
@@ -66,7 +82,7 @@ function func(){
      */
 }
 
-function dibujarCuadriculado (){
+function dibujarCuadriculado (){{
     var canvas =document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
@@ -81,11 +97,12 @@ function dibujarCuadriculado (){
         ctx.moveTo(0, i);
         ctx.lineTo(canvas.width, i);
     }
-
-    //Dibujar Ejes
     ctx.strokeStyle="rgba(110,110,110,0.67)";
     ctx.stroke();
-    ctx.closePath();
+
+
+}
+
 
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -99,91 +116,8 @@ function dibujarCuadriculado (){
 
     ctx.stroke();
     ctx.closePath();
+
 }
-
-function marcarRecta(){
-    var canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext("2d");
-    ctx.lineWidht= 2;
-    ctx.strokeStyle= "#001f33";
-    var x, y;
-
-    var vara=document.getElementById("a").value;
-    var varb=document.getElementById("b").value;
-    var varc=document.getElementById("c").value;
-    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
-
-    ctx.beginPath();
-    //Valor de inicio de la recta
-    x=50;
-    y=(varc-vara*x)/varb;
-    console.log("valor X: " + 50);
-    console.log("valor y: " + y);
-
-    dibX = transX(x);
-    dibY = transY(y);
-    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
-    ctx.moveTo(dibX, dibY);
-
-    //Valor final de la recta
-    x=-50;
-    y=(varc-vara*x)/varb;
-    console.log("valor X: " + -50);
-    console.log("valor y: " + y);
-    dibX = transX(x);
-    dibY = transY(y);
-    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
-    ctx.lineTo(dibX, dibY);
-    ctx.stroke();
-    ctx.closePath();
-
-
-
-
-    var vara=document.getElementById("d").value;
-    var varb=document.getElementById("e").value;
-    var varc=document.getElementById("f").value;
-    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
-
-    ctx.beginPath();
-    //Valor de inicio de la recta
-    x=50;
-    y=(varc-vara*x)/varb;
-    console.log("valor X: " + 50);
-    console.log("valor y: " + y);
-
-    dibX = transX(x);
-    dibY = transY(y);
-    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
-    ctx.moveTo(dibX, dibY);
-
-    //Valor final de la recta
-    x=-50;
-    y=(varc-vara*x)/varb;
-    console.log("valor X: " + -50);
-    console.log("valor y: " + y);
-    dibX = transX(x);
-    dibY = transY(y);
-    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
-    ctx.lineTo(dibX, dibY);
-    ctx.stroke();
-    ctx.closePath();
-}
-
-function transY(coorY) {
-    var trY = -(coorY-25)*10;
-
-    return trY;
-}
-
-function transX(coorX) {
-    var trX = (coorX+50)*10;
-
-    return trX;
-}
-
-
-
 
 function res()
 {
