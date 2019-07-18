@@ -5,45 +5,46 @@
 
     <title> CC calculos</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+
 </head>
-<body background="fondo1.jpg" bgcolor="FFCECB">
+<body bgcolor="FFCECB" onload="saludarcontacto()">
 
-<table width="550" bgcolor=FFCECB align=center>
-    <tr>
-    </tr>
-</table>
 <header>
-<div id="tituloPrincipal">
+    <section id="tituloPrincipal">
 
-    <img src="imagenes\descarga.jpg" width="100 px">
-    <h1><u>CC CALCULADORA: PARA APRENDER ECUACIONES</u></h1>
-</div>
-<nav>
-    <a href="pagina.html" target="_blank">INICIO</a>
-    <a href="temas.html" target="_blank"> TEMAS</a>
-    <a href="ejercicios.html" target="_blank"> EJERCICIOS</a>
-    <a href="somos.html" target="_blank"> QUIENES SOMOS?</a>
-    <a href="contacto.html" target="_blank"> CONTACTANOS</a>
-</nav>
-    <form id="Contactanos">
-        Nombre:<input type="text" name="nombre_suscriptor"> <br>
-        Apellido:<input type="text" name="apellido_suscriptor"> <br>
-        Sexo:<input type="radio" name="genero" value="Masculino">Masculino
-        <input type="radio" name="genero" value="Femenino"> Femenino <br>
-        Edad:<input type=" number " min="1" name="edad"> <br>
-        Conformidad:
-        <input type="checkbox" name="Me ayudo esta pagina"> Pude resolver mi duda
-        <input type="checkbox" name="No me ayudo esta pagina"> No me quedo tan claro
-        <br>
+        <h1><img src="imagenes/descarga.jpg" width="100 px" alt="logo">
+            <u>CC CALCULADORA: PARA APRENDER ECUACIONES</u></h1>
 
-        Agregue un comentario/duda:
-        <textarea name="comentario">
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="temas.html"> TEMAS</a>
+            <a href="ejercicios.html"> EJERCICIOS</a>
+            <a href="somos.html"> QUIENES SOMOS?</a>
+            <a href="contacto.html"> CONTACTANOS</a>
+        </nav>
+    </section>
+</header>
+<form id="Contactanos">
+    Nombre:<input type="text" name="nombre_suscriptor"> <br>
+    Apellido:<input type="text" name="apellido_suscriptor"> <br>
+    Sexo:<input type="radio" name="genero" value="Masculino">Masculino
+    <input type="radio" name="genero" value="Femenino"> Femenino <br>
+    Edad:<input type=" number " min="1" name="edad"> <br>
+    Conformidad:
+    <input type="checkbox" name="Me ayudo esta pagina"> Pude resolver mi duda
+    <input type="checkbox" name="No me ayudo esta pagina"> No me quedo tan claro
+    <br>
+
+    Agregue un comentario/duda:
+    <label>
+<textarea name="comentario">
 
 </textarea>
-    </form>
-    <button type="button">Boton de Eviar</button>
-    </form>
-</header>
+    </label><br>
+    <button type="button">Enviar</button>
+</form>
+
 
 </body>
 </html>
