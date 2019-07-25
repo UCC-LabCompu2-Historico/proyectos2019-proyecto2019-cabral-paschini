@@ -74,10 +74,10 @@ function resolverprimergrado() {
  @return retorna las raices de la ecuacion
  */
 function resolversegundogrado() {
-    if ((isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Nrodos.value)) === false)) {
+    if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === false) || (isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Nrodos.value)) === false)) {
         alert("ingrese numeros porfavor");
         document.ejercicios.Nrodos.value = "";
-        document.ejercicios.Xdos.value = "";
+        document.ejercicios.Xdos.value = " ";
         document.ejercicios.Xcuadrado.value = "";
         document.ejercicios.segundordoa.value = "NaN";
         document.ejercicios.segundordob.value = "NaN";
