@@ -55,7 +55,7 @@ function saludargrafica() {
  @return el valor de la raiz
  */
 function resolverprimergrado() {
-    if ((isNaN(Number(document.ejercicios.X.value)) === false) || (isNaN(Number(document.ejercicios.Nro.value)) === false)) {
+    if ((isNaN(Number(document.ejercicios.X.value)) === true) || (isNaN(Number(document.ejercicios.Nro.value)) === true)) {
         alert("ingrese numeros porfavor");
         document.ejercicios.X.value = "";
         document.ejercicios.Nro.value = "";
@@ -74,7 +74,7 @@ function resolverprimergrado() {
  @return retorna las raices de la ecuacion
  */
 function resolversegundogrado() {
-    if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === false) || (isNaN(Number(document.ejercicios.Xdos.value)) === false) || (isNaN(Number(document.ejercicios.Nrodos.value)) === false)) {
+    if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === true) || (isNaN(Number(document.ejercicios.Xdos.value)) === true ) || (isNaN(Number(document.ejercicios.Nrodos.value)) === true)) {
         alert("ingrese numeros porfavor");
         document.ejercicios.Nrodos.value = "";
         document.ejercicios.Xdos.value = " ";
