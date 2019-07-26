@@ -77,7 +77,7 @@ function resolversegundogrado() {
     if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === true) || (isNaN(Number(document.ejercicios.Xdos.value)) === true) || (isNaN(Number(document.ejercicios.Nrodos.value)) === true)) {
         alert("ingrese numeros porfavor");
         document.ejercicios.Nrodos.value = "";
-        document.ejercicios.Xdos.value = "";
+        document.ejercicios.Xdos.value = " ";
         document.ejercicios.Xcuadrado.value = "";
         document.ejercicios.segundordoa.value = "NaN";
         document.ejercicios.segundordob.value = "NaN";
