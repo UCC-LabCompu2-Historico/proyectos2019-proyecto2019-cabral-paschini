@@ -74,7 +74,7 @@ function resolverprimergrado() {
  @return retorna las raices de la ecuacion
  */
 function resolversegundogrado() {
-    if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === true) || (isNaN(Number(document.ejercicios.Xdos.value)) === true ) || (isNaN(Number(document.ejercicios.Nrodos.value)) === true)) {
+    if ((isNaN(Number(document.ejercicios.Xcuadrado.value)) === true) || (isNaN(Number(document.ejercicios.Xdos.value)) === true) || (isNaN(Number(document.ejercicios.Nrodos.value)) === true)) {
         alert("ingrese numeros porfavor");
         document.ejercicios.Nrodos.value = "";
         document.ejercicios.Xdos.value = " ";
