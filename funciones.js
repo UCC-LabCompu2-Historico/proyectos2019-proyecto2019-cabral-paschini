@@ -105,6 +105,11 @@ function func() {
         + "<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
 }
 
+/**
+Se muestra un recuadro cuadriculado con los ejes de Coordenadas
+@method dibujarCuadriculado
+@return hoja cuadriculada con los ejes de coordenadas
+**/
 function dibujarCuadriculado() {
     {
         var canvas = document.getElementById("myCanvas");
@@ -142,6 +147,11 @@ function dibujarCuadriculado() {
     ctx.closePath();
 
 }
+/**
+Se muestra las rectas del Sistema de Coordenadas
+@method marcarRecta
+@return dibuja las restas del sistema de ecuaciones
+**/
 function marcarRecta(){
 	    var canvas = document.getElementById("myCanvas");
 	    ctx = canvas.getContext("2d");
@@ -210,19 +220,31 @@ function marcarRecta(){
 	    ctx.stroke();
 	    ctx.closePath();
 	}
-
+/**
+Se traslada la recta en el eje y
+@method transY
+@return se mueve la recta en el eje y
+**/
 	function transY(coorY) {
 	    var trY = -(coorY-25)*10;
 
 	    return trY;
 	}
-
+/**
+Se traslada la recta en el eje x 
+@method transX
+@return traslada de la recta en el eje x
+**/
 	function transX(coorX) {
 	    var trX = (coorX+50)*10;
 
 	    return trX;
 	}
-
+/**
+Resuelve el sistema de ECUACIONES
+@method res 
+@return resolucion del sistema de ecuaciones
+**/
   function res()
   	{
   	   a=document.datos.a.value;
@@ -231,20 +253,24 @@ function marcarRecta(){
       d=document.datos.d.value;
       e=document.datos.e.value;
       f=document.datos.f.value;
-      g=a*e-b*d; 
+      g=a*e-b*d;
       if(g==0)
-  {if (c*e-b*f==0) 
+  {if (c*e-b*f==0)
     {x="Indeterminado";y="Indeterminado"}
   else
   {x="Inconpatible";y="Incompatible"}
   }
   else
   {x=(c*e-b*f)/g;
-    y=(a*f-c*d)/g}; 
+    y=(a*f-c*d)/g};
     document.datos.x.value=x;
     document.datos.y.value=y;
   }
-
+/**
+Dibuja las rectas de las ECUACIONES
+@method DibujeInterseccion
+@return rectas en el plano
+**/
 function DibujeInterseccion(x, y, x, y) {
 
     function res() {
@@ -256,4 +282,16 @@ function DibujeInterseccion(x, y, x, y) {
 
         ctx.stroke();
     }
+}
+/**
+Limpia el grafico
+@method limpiar
+@return limpia el grafico de las rectas del sistema de ecuaciones
+**/
+function limpiar (x,y){
+  //limpia el grafico
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.beginPath();
 }
