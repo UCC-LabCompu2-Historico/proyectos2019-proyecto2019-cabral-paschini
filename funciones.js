@@ -107,7 +107,7 @@ function func() {
 
 /**
 Se muestra un recuadro cuadriculado con los ejes de Coordenadas
-@method dibujarCuadriculado
+@method  function dibujarCuadriculado
 @return hoja cuadriculada con los ejes de coordenadas
 **/
 function dibujarCuadriculado() {
@@ -149,7 +149,9 @@ function dibujarCuadriculado() {
 }
 /**
 Se muestra las rectas del Sistema de Coordenadas
-@method marcarRecta
+@method function marcarRecta
+@param valor de x
+@param valor de y
 @return dibuja las restas del sistema de ecuaciones
 **/
 function marcarRecta(){
@@ -222,7 +224,8 @@ function marcarRecta(){
 	}
 /**
 Se traslada la recta en el eje y
-@method transY
+@method function transY
+@param valor de y
 @return se mueve la recta en el eje y
 **/
 	function transY(coorY) {
@@ -231,8 +234,9 @@ Se traslada la recta en el eje y
 	    return trY;
 	}
 /**
-Se traslada la recta en el eje x 
-@method transX
+Se traslada la recta en el eje x
+@method function de transX
+@param valor de x
 @return traslada de la recta en el eje x
 **/
 	function transX(coorX) {
@@ -242,7 +246,10 @@ Se traslada la recta en el eje x
 	}
 /**
 Resuelve el sistema de ECUACIONES
-@method res 
+@method function res
+@param valor de constantes
+@param valor de x
+@param valor de y
 @return resolucion del sistema de ecuaciones
 **/
   function res()
@@ -268,7 +275,7 @@ Resuelve el sistema de ECUACIONES
   }
 /**
 Dibuja las rectas de las ECUACIONES
-@method DibujeInterseccion
+@method function DibujeInterseccion
 @return rectas en el plano
 **/
 function DibujeInterseccion(x, y, x, y) {
@@ -285,7 +292,7 @@ function DibujeInterseccion(x, y, x, y) {
 }
 /**
 Limpia el grafico
-@method limpiar
+@method function limpiar
 @return limpia el grafico de las rectas del sistema de ecuaciones
 **/
 function limpiar (x,y){
