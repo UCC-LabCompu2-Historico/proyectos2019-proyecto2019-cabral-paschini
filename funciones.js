@@ -142,30 +142,108 @@ function dibujarCuadriculado() {
     ctx.closePath();
 
 }
+function marcarRecta(){
+	    var canvas = document.getElementById("myCanvas");
+	    ctx = canvas.getContext("2d");
+	    ctx.lineWidht= 2;
+	    ctx.strokeStyle= "#001f33";
+	    var x, y;
 
-function res() {
-    a = document.datos.a.value;
-    b = document.datos.b.value;
-    c = document.datos.c.value;
-    d = document.datos.d.value;
-    e = document.datos.e.value;
-    f = document.datos.f.value;
-    g = a * e - b * d;
-    if (g == 0) {
-        if (c * e - b * f == 0) {
-            x = "Indeterminado";
-            y = "Indeterminado"
-        } else {
-            x = "Inconpatible";
-            y = "Incompatible"
-        }
-    } else {
-        x = (c * e - b * f) / g;
-        y = (a * f - c * d) / g
-    }
-    ;document.datos.x.value = x;
-    document.datos.y.value = y;
-}
+	    var vara=document.getElementById("a").value;
+	    var varb=document.getElementById("b").value;
+	    var varc=document.getElementById("c").value;
+	    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
+
+	    ctx.beginPath();
+	    //Valor de inicio de la recta
+	    x=50;
+	    y=(varc-vara*x)/varb;
+	    console.log("valor X: " + 50);
+	    console.log("valor y: " + y);
+
+	    dibX = transX(x);
+	    dibY = transY(y);
+	    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+	    ctx.moveTo(dibX, dibY);
+
+	    //Valor final de la recta
+	    x=-50;
+	    y=(varc-vara*x)/varb;
+	    console.log("valor X: " + -50);
+	    console.log("valor y: " + y);
+	    dibX = transX(x);
+	    dibY = transY(y);
+	    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+	    ctx.lineTo(dibX, dibY);
+	    ctx.stroke();
+	    ctx.closePath();
+
+
+
+
+	    var vara=document.getElementById("d").value;
+	    var varb=document.getElementById("e").value;
+	    var varc=document.getElementById("f").value;
+	    console.log("Valores de entrada: "+vara+" ,"+varb+" ,"+varc);
+
+	    ctx.beginPath();
+	    //Valor de inicio de la recta
+	    x=50;
+	    y=(varc-vara*x)/varb;
+	    console.log("valor X: " + 50);
+	    console.log("valor y: " + y);
+
+	    dibX = transX(x);
+	    dibY = transY(y);
+	    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+	    ctx.moveTo(dibX, dibY);
+
+	    //Valor final de la recta
+	    x=-50;
+	    y=(varc-vara*x)/varb;
+	    console.log("valor X: " + -50);
+	    console.log("valor y: " + y);
+	    dibX = transX(x);
+	    dibY = transY(y);
+	    console.log("X trans: "+ dibX + "Y trans: "+ dibY);
+	    ctx.lineTo(dibX, dibY);
+	    ctx.stroke();
+	    ctx.closePath();
+	}
+
+	function transY(coorY) {
+	    var trY = -(coorY-25)*10;
+
+	    return trY;
+	}
+
+	function transX(coorX) {
+	    var trX = (coorX+50)*10;
+
+	    return trX;
+	}
+
+  function res()
+  	{
+  	   a=document.datos.a.value;
+      b=document.datos.b.value;
+      c=document.datos.c.value;
+      d=document.datos.d.value;
+      e=document.datos.e.value;
+      f=document.datos.f.value;
+      g=a*e-b*d; 
+      if(g==0)
+  {if (c*e-b*f==0) 
+    {x="Indeterminado";y="Indeterminado"}
+  else
+  {x="Inconpatible";y="Incompatible"}
+  }
+  else
+  {x=(c*e-b*f)/g;
+    y=(a*f-c*d)/g}; 
+    document.datos.x.value=x;
+    document.datos.y.value=y;
+  }
 
 function DibujeInterseccion(x, y, x, y) {
 
@@ -174,9 +252,8 @@ function DibujeInterseccion(x, y, x, y) {
 
         ctx.moveTo(x, y);
 
-        ctx.lineTo(x1, y1);
+        ctx.lineTo(x, y);
 
         ctx.stroke();
     }
-
 }
