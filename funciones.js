@@ -132,7 +132,6 @@ function dibujarCuadriculado() {
 
     }
 
-
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.strokeStyle = "#000000";
@@ -150,8 +149,6 @@ function dibujarCuadriculado() {
 /**
 Se muestra las rectas del Sistema de Coordenadas
 @method function marcarRecta
-@param valor de x
-@param valor de y
 @return dibuja las restas del sistema de ecuaciones
 **/
 function marcarRecta(){
@@ -225,7 +222,6 @@ function marcarRecta(){
 /**
 Se traslada la recta en el eje y
 @method function transY
-@param valor de y
 @return se mueve la recta en el eje y
 **/
 	function transY(coorY) {
@@ -236,7 +232,6 @@ Se traslada la recta en el eje y
 /**
 Se traslada la recta en el eje x
 @method function de transX
-@param valor de x
 @return traslada de la recta en el eje x
 **/
 	function transX(coorX) {
@@ -244,14 +239,20 @@ Se traslada la recta en el eje x
 
 	    return trX;
 	}
-/**
-Resuelve el sistema de ECUACIONES
-@method function res
-@param valor de constantes
-@param valor de x
-@param valor de y
-@return resolucion del sistema de ecuaciones
-**/
+
+
+  /**
+   * Calculo del sistemas de ecuaciones
+   * @method res;
+   * @param Parámetro a;
+   * @param Parámetro b;
+   * @param Parámetro c;
+   * @param Parámetro d;
+   *@param Parámetro e;
+   *@param Parámetro f;
+   * @return x,y;
+   */
+
   function res()
   	{
   	   a=document.datos.a.value;
@@ -273,12 +274,12 @@ Resuelve el sistema de ECUACIONES
     document.datos.x.value=x;
     document.datos.y.value=y;
   }
-/**
-Dibuja las rectas de las ECUACIONES
-@method function DibujeInterseccion
-@return rectas en el plano
-**/
-function DibujeInterseccion(x, y, x, y) {
+  /**
+  * Con los valores anteriores realiza el grafico
+ * @method DibujeInterseccion;
+ * @return grafica;
+  **/
+  function DibujeInterseccion(x, y, x, y) {
 
     function res() {
         ctx.beginPath();
@@ -288,17 +289,6 @@ function DibujeInterseccion(x, y, x, y) {
         ctx.lineTo(x, y);
 
         ctx.stroke();
+
     }
-}
-/**
-Limpia el grafico
-@method function limpiar
-@return limpia el grafico de las rectas del sistema de ecuaciones
-**/
-function limpiar (x,y){
-  //limpia el grafico
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.beginPath();
 }
