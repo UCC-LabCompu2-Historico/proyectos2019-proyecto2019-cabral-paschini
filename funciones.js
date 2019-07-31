@@ -143,6 +143,15 @@ function dibujarCuadriculado() {
 
 }
 
+/**
+Aparece los ejes de manera animada
+@method  function ejeX
+ @param ctx
+ @param canvas.height
+ @param canvas.width
+ @return el eje dibujado
+**/
+
 async function ejeX(ctx,alto,ancho){
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -155,6 +164,17 @@ async function ejeX(ctx,alto,ancho){
     }
     ctx.closePath();
 }
+
+
+/**
+ Aparece los ejes de manera animada
+ @method  function ejeY
+ @param ctx
+ @param canvas.height
+ @param canvas.width
+ @return el eje dibujado
+ **/
+
 async function ejeY(ctx,alto,ancho){
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -318,6 +338,3 @@ Se traslada la recta en el eje x
 
     }
 }
-
-
-
