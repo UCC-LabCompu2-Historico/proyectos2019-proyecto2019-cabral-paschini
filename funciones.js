@@ -105,6 +105,10 @@ function func() {
         + "<p><u>IMPORTANTE:</u> RECORDAR QUE DE LA RAIZ SE OBTIENEN UN VALOR POSITIVO Y OTRO NEGATIVO </p>";
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 /**
 Se muestra un recuadro cuadriculado con los ejes de Coordenadas
 @method  function dibujarCuadriculado
@@ -118,11 +122,13 @@ function dibujarCuadriculado() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         for (var i = 10; i < canvas.width; i += 10) {
+
             ctx.moveTo(i, 0);
             ctx.lineTo(i, canvas.height);
         }
 
         for (var i = 10; i < canvas.width; i += 10) {
+
             ctx.moveTo(0, i);
             ctx.lineTo(canvas.width, i);
         }
@@ -132,26 +138,41 @@ function dibujarCuadriculado() {
 
     }
 
+    ejeX(ctx,canvas.height,canvas.width);
+    ejeY(ctx,canvas.height,canvas.width);
+
+}
+
+async function ejeX(ctx,alto,ancho){
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.strokeStyle = "#000000";
-
-    ctx.moveTo(0, canvas.height / 2);
-    ctx.lineTo(canvas.width, canvas.height / 2);
-
-    ctx.moveTo(canvas.width / 2, 0);
-    ctx.lineTo(canvas.width / 2, canvas.height);
-
-    ctx.stroke();
+    for(let i = 0; i<ancho ; i++){
+        await sleep(5);
+        ctx.moveTo(0,alto/2);
+        ctx.lineTo(i,alto/2);
+        ctx.stroke();
+    }
     ctx.closePath();
-
+}
+async function ejeY(ctx,alto,ancho){
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.strokeStyle = "#000000";
+    for(let j = 0; j < alto ; j++){
+        await sleep(5);
+        ctx.moveTo(ancho/2,0);
+        ctx.lineTo(ancho/2, j);
+        ctx.stroke();
+    }
+    ctx.closePath();
 }
 /**
 Se muestra las rectas del Sistema de Coordenadas
 @method function marcarRecta
 @return dibuja las restas del sistema de ecuaciones
 **/
-function marcarRecta(){
+async function marcarRecta(){
 	    var canvas = document.getElementById("myCanvas");
 	    ctx = canvas.getContext("2d");
 	    ctx.lineWidht= 2;
@@ -166,9 +187,13 @@ function marcarRecta(){
 	    ctx.beginPath();
 	    //Valor de inicio de la recta
 	    x=50;
+
+
+
 	    y=(varc-vara*x)/varb;
 	    console.log("valor X: " + 50);
 	    console.log("valor y: " + y);
+
 
 	    dibX = transX(x);
 	    dibY = transY(y);
@@ -176,6 +201,7 @@ function marcarRecta(){
 	    ctx.moveTo(dibX, dibY);
 
 	    //Valor final de la recta
+
 	    x=-50;
 	    y=(varc-vara*x)/varb;
 	    console.log("valor X: " + -50);
@@ -292,3 +318,6 @@ Se traslada la recta en el eje x
 
     }
 }
+
+
+
